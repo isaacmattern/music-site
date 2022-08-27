@@ -1,0 +1,132 @@
+:root {
+  --main-bg-color: #e0e0e0;
+  --main-primary-color: #181818;
+  --main-secondary-color: #555555;
+  --max-body-width: 864px;
+}
+
+@font-face {
+  font-family: Hellovetica;
+  src: url(rainyhearts.ttf);
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--main-bg-color);
+  color: var(--main-primary-color);
+}
+
+body {
+  max-width: var(--max-body-width);
+  padding: 20px;
+  margin: auto;
+  font-family: 'Hellovetica', sans-serif;
+  line-height: 1.7rem;
+
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexbox-centering-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid var(--main-primary-color);
+}
+
+header {
+  width: 320px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  line-height: 1.8rem;
+  margin-bottom: 24px;
+}
+
+header * {
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.3rem;
+}
+
+header h2 {
+  font-size: 1.5rem;
+  color: var(--main-secondary-color);
+}
+
+.link-box-container {
+  margin-bottom: 24px;
+}
+
+.link-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  /* border: 1.5px solid var(--main-primary-color); */
+  border-radius: 4px;
+  font-size: 1.5rem;
+  padding: 2px 0;
+  width: 200px;
+  text-decoration: none;
+  margin: 8px auto;
+
+  background-color: var(--main-primary-color);
+  color: var(--main-bg-color);
+  transition: all 0.27s cubic-bezier(0.65,0.05,0.4,1);
+}
+
+.link-box:hover {
+  background-color: var(--main-secondary-color);
+  /* letter-spacing: 2px; */
+  transform: scale(0.96);
+}
+
+.download-link-container {
+  width: 480px;
+  margin: auto 0;
+}
+
+.download-link {
+  width: 100%;
+  margin: 4px 0;
+  display: flex;
+  align-items: center;
+
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.download-link:hover {
+  text-decoration: underline;
+}
+
+.download-link img {
+  height: 20px;
+  width: 20px;
+  margin-bottom: 2px;
+  margin-right: 8px;
+}
+
+.download-link .free {
+  margin-right: 0;
+  margin-left: 9px;
+
+  opacity: 80%;
+}
