@@ -1,14 +1,10 @@
 :root {
-  --main-bg-color: #e0e0e0;
-  --main-primary-color: #181818;
-  --main-secondary-color: #555555;
+  --main-bg-color: #000000;
+  --main-primary-color: #ffffff;
+  --main-secondary-color: #bbbbbb;
+  --main-shadow-color: #555555;
   --max-body-width: 864px;
-}
-
-@font-face {
-  font-family: Hellovetica;
-  src: url(rainyhearts.ttf);
-  font-weight: bold;
+  --main-alert-color: red;
 }
 
 * {
@@ -23,9 +19,8 @@ body {
   max-width: var(--max-body-width);
   padding: 20px;
   margin: auto;
-  font-family: 'Hellovetica', sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   line-height: 1.7rem;
-
   min-height: 90vh;
   display: flex;
   align-items: center;
@@ -40,10 +35,10 @@ body {
 }
 
 .profile-pic {
-  width: 80px;
-  height: 80px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
-  border: 2px solid var(--main-primary-color);
+  border: 1px solid var(--main-primary-color);
 }
 
 header {
@@ -51,8 +46,8 @@ header {
   margin: auto;
   display: flex;
   align-items: center;
-  gap: 20px;
-
+  justify-content: center;
+  gap: 16px;
   line-height: 1.8rem;
   margin-bottom: 24px;
 }
@@ -78,24 +73,18 @@ header h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 14px;
-  /* border: 1.5px solid var(--main-primary-color); */
-  border-radius: 4px;
+  border: 1px solid var(--main-bg-color);
   font-size: 1.5rem;
-  padding: 2px 0;
-  width: 200px;
+  padding: 4px 0;
+  width: 180px;
   text-decoration: none;
-  margin: 8px auto;
-
+  margin: 10px auto;
   background-color: var(--main-primary-color);
   color: var(--main-bg-color);
-  transition: all 0.27s cubic-bezier(0.65,0.05,0.4,1);
 }
 
 .link-box:hover {
   background-color: var(--main-secondary-color);
-  /* letter-spacing: 2px; */
-  transform: scale(0.96);
 }
 
 .download-link-container {
@@ -105,29 +94,41 @@ header h2 {
 
 .download-link {
   width: 100%;
-  margin: 4px 0;
+  margin: 6px 0;
+  margin-left: 16px;
   display: flex;
   align-items: center;
   text-decoration: none;
-
   font-size: 1.3rem;
   cursor: pointer;
 }
 
-.download-link:hover {
+.download-link-text {
+  display: flex;
+  align-items: center;
+}
+
+.download-link:hover .download-link-title {
   text-decoration: underline;
 }
 
 .download-link img {
-  height: 20px;
-  width: 20px;
+  height: 22px;
+  width: 22px;
+  margin-top: 2px;
   margin-bottom: 2px;
-  margin-right: 8px;
+  margin-right: 6px;
 }
 
 .download-link .free {
   margin-right: 0;
   margin-left: 9px;
-
   opacity: 80%;
+}
+
+.free-icon {
+  color: var(--main-alert-color);
+  font-size: 12px;
+  margin-left: 8px;
+  text-decoration: none;
 }
