@@ -1,8 +1,7 @@
 :root {
-  --main-bg-color: #004568;
   --main-primary-color: #ffffff;
-  --main-secondary-color: #cccccc;
-  --main-shadow-color: #555555;
+  --main-secondary-color: #888888;
+  --main-shadow-color: #444444;
   --max-body-width: 864px;
   --main-alert-color: red;
 }
@@ -11,12 +10,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: var(--main-bg-color);
+  background-repeat: repeat;
   color: var(--main-primary-color);
 }
 
 body {
   max-width: var(--max-body-width);
+  background-color: black;
+  background-image: url("./img/light-blue-stars-falling.gif");
   padding: 20px;
   margin: auto;
   font-family: 'Archivo Narrow', sans-serif;
@@ -74,7 +75,7 @@ header h2 {
   align-items: center;
   justify-content: center;
   border: 2px solid var(--main-secondary-color);
-  box-shadow: 8px 8px black;
+  box-shadow: 6px 6px var(--main-secondary-color);
   font-size: 1.5rem;
   padding: 6px 0;
   width: 240px;
@@ -86,6 +87,8 @@ header h2 {
 
 .link-box:hover {
   background-color: var(--main-secondary-color);
+  border-color: var(--main-primary-color);
+  box-shadow: 6px 6px var(--main-shadow-color);
 }
 
 .download-link-container {
